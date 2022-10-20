@@ -32,6 +32,9 @@ def fullnode():
     os.system("go version")
     os.system("git clone https://github.com/JackalLabs/canine-chain.git")
     os.system("cd canine-chain && make install")
+    os.system('clear')
+    print("Full node successfully installed. Use it with `canined version`.")
+    exit()
 
 option_dict = {
     "1": fullnode
