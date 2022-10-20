@@ -28,6 +28,10 @@ def prereqs():
 
 def fullnode():
     prereqs()
+    os.system("wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz")
+    os.system("rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz")
+    os.system("echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile")
+    os.system("go version")
     os.system("git clone https://github.com/JackalLabs/canine-chain.git")
     os.system("cd canine-chain && make install")
 
