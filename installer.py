@@ -23,8 +23,13 @@ options = '''
 2) Set up Storage Provider
 '''
 
+def prereqs():
+    os.system("apt-get install wget -y")
+
 def fullnode():
-    os.system("echo fullnode")
+    prereqs()
+    os.system("git clone https://github.com/JackalLabs/canine-chain.git")
+    os.system("cd canine-chain && make install")
 
 option_dict = {
     "1": fullnode
