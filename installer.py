@@ -39,7 +39,7 @@ def fullnode():
     os.system(f"canined init {name}")
     os.system("wget -O ~/.canine/config/genesis.json https://raw.githubusercontent.com/JackalLabs/woof/master/genesis/woof-final.json")
     GAS="0.002ujkl"
-    os.system(f'sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = "{GAS}"/" $HOME/.canine/config/app.toml')
+    # os.system(f'sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = "{GAS}"/" $HOME/.canine/config/app.toml')
     print("Start node with `canined start`.")
     exit()
 
