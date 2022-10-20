@@ -28,6 +28,7 @@ def prereqs():
 
 def fullnode():
     prereqs()
+    os.system("rm -rf ~/.canine")
     os.system("./install_go.sh")
     os.system("go version")
     os.system("git clone https://github.com/JackalLabs/canine-chain.git")
